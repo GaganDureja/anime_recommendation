@@ -32,3 +32,54 @@ Ensure the following software is installed:
 ```bash
 git clone https://github.com/GaganDureja/anime-recommendation-system.git
 cd anime-recommendation-system
+```
+### 2. Set Up Environment Variables
+```bash
+python -m venv env
+```
+### 3. Install Dependencies
+#### On Linux/MacOS:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+#### On Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 4. Set Up PostgreSQL
+- Download pgadmin or Log into PostgreSQL
+- Create a user with name **postgres**, password **123** (you can change this to your own but remember to update the same in settings.py)
+- Create a database name anime_recommendation and select postgres user to access all
+
+### 5. Run Database Migrations
+```bash
+python manage.py migrate
+```
+
+### 6. Start the Development Server
+#### On Linux/MacOS:
+```bash
+python3 manage.py runserver
+```
+#### On Windows:
+```bash
+python manage.py runserver
+```
+
+## API Endpoints
+
+### Authentication
+- **POST** `/auth/register`: Register a new user.
+- **POST** `/auth/login`: Login and retrieve a JWT token.
+
+### Anime
+- **GET** `/anime/search`: Search anime by name or genre.
+- **GET** `/anime/recommendations`: Get recommendations (requires authentication).
+
+### User Preferences
+- **POST** `/user/preferences`: Add/Update user preferences.
