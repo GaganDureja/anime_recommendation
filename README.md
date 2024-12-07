@@ -70,7 +70,7 @@ python3 manage.py runserver
 ```bash
 python manage.py runserver
 ```
-
+---
 ## API Endpoints
 
 ### Authentication
