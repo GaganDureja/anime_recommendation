@@ -71,8 +71,8 @@ python3 manage.py runserver
 python manage.py runserver
 ```
 ### 7. Test Project
-[Localhost](http://127.0.0.1:8000/)
-This will get you to swagger api test where you can test all the api endpoints.
+Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to access the Swagger API interface, where you can test all the API endpoints.
+
 ---
 ## API Endpoints
 
